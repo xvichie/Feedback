@@ -1,0 +1,22 @@
+.Header {
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f5effd;
+
+    border-bottom: 3px solid #9364CC;
+
+    .Logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            max-height: 200px;
+        }
+    }
+}

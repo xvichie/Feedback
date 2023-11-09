@@ -1,0 +1,107 @@
+.Faces {
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 500px;
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .stretch_column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.not_satisfied:hover {
+    outline: red 2px solid;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.mid_satisfied:hover {
+    outline: yellow 2px solid;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.good_satisfied:hover {
+    outline: green 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modal {
+    font-size: 12px;
+    animation-name: anvil;
+    animation-duration: 0.5s;
+}
+
+.modal>.header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal>.content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.modal>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+}
+
+@keyframes anvil {
+    0% {
+        transform: scale(1) translateY(0px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+
+    1% {
+        transform: scale(0.96) translateY(10px);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+        box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+}
+
+.popup-content {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
